@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-/* 添加Lexend字体 */
+
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap');
 
 body {
@@ -40,7 +40,7 @@ nav {
 
 nav .container {
     display: grid;
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: auto 1fr;
     align-items: center;
 }
 
@@ -68,7 +68,7 @@ nav .container {
     display: flex;
     gap: 30px;
     align-items: center;
-    position: relative;
+    justify-content: flex-end;
 }
 
 .nav-links a {
@@ -117,18 +117,18 @@ nav .container {
     box-shadow: 0 5px 15px rgba(151, 71, 255, 0.4);
 }
 
-/* Main Content */
+
 main {
     padding: 60px 0 50px;
     text-align: center;
     position: relative;
 }
 
-/* 将光晕效果移到body中 */
+
 body::before {
     content: '';
     position: absolute;
-    top: 50vh; /* 放在视口中间 */
+    top: 50vh; 
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
@@ -482,15 +482,12 @@ body::before {
     }
 }
 
-/* ===== DISCOVER SECTION - 完全独立的样式 ===== */
+
 .discover {
     padding: 80px 0;
     position: relative;
 }
 
-.discover .section-title {
-    /* 样式已移至通用.section-title */
-}
 
 .discover-grid {
     display: grid;
@@ -499,7 +496,7 @@ body::before {
     margin-top: 40px;
 }
 
-/* 基本卡片样式 */
+
 .discover-card {
     background: #140A27;
     border-radius: 16px;
@@ -515,24 +512,24 @@ body::before {
     box-shadow: 0 15px 30px rgba(104, 8, 213, 0.2);
 }
 
-/* 宽卡片占据两列 */
+
 .discover-card.wide-card {
     grid-column: span 2;
 }
 
-/* 卡片内容样式 */
+
 .discover-card .card-content {
     padding: 40px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    height: 100%; /* 确保内容占满整个高度 */
+    height: 100%; 
 }
 
-/* 文本内容样式 */
+
 .discover-card .text-content {
     margin-bottom: 30px;
-    flex: 1; /* 让文本内容占据剩余空间 */
+    flex: 1; 
 }
 
 .discover-card h3 {
@@ -547,7 +544,7 @@ body::before {
     opacity: 0.8;
 }
 
-/* 恢复宽卡片的图片容器样式 */
+
 .discover-card.wide-card .image-container {
     width: 100%;
     height: 280px;
@@ -557,7 +554,7 @@ body::before {
     margin-bottom: 0;
 }
 
-/* 宽卡片的图片样式 */
+
 .discover-card.wide-card .image-container img {
     width: 100%;
     height: 100%;
@@ -566,17 +563,17 @@ body::before {
     margin: 0;
 }
 
-/* 普通卡片的图片容器样式 */
+
 .discover-card:not(.wide-card) .image-container {
     width: 100%;
     height: 180px;
     border-radius: 12px;
     overflow: hidden;
-    margin-top: auto; /* 将图片推到底部 */
+    margin-top: auto; 
     margin-bottom: 0;
 }
 
-/* 普通卡片的图片样式 */
+
 .discover-card:not(.wide-card) .image-container img {
     width: 100%;
     height: 100%;
@@ -585,14 +582,14 @@ body::before {
     margin: 0;
 }
 
-/* 确保所有普通卡片高度一致 */
+
 .discover-card:not(.wide-card) {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-/* 特别针对Fine-Tune for Success卡片的调整 */
+
 .discover-card.wide-card:first-child .text-content {
     margin-bottom: 30px;
 }
@@ -601,7 +598,7 @@ body::before {
     margin-bottom: 0;
 }
 
-/* 响应式调整 */
+
 @media (max-width: 768px) {
     .features .card-wrapper.wide-card,
     .discover-card.wide-card {
@@ -614,7 +611,7 @@ body::before {
     }
 }
 
-/* 底部内容样式 */
+
 .unlock-section {
     margin-top: 100px;
     text-align: center;
@@ -666,7 +663,7 @@ body::before {
     margin-bottom: 20px;
 }
 
-/* 响应式设计 */
+
 @media (max-width: 1024px) {
     .discover-grid {
         grid-template-columns: 1fr;
@@ -693,7 +690,7 @@ body::before {
     }
 }
 
-/* Tokenomics部分样式 */
+
 .tokenomics {
     padding: 60px 0;
 }
@@ -742,7 +739,7 @@ body::before {
     display: none;
 }
 
-/* 响应式设计 */
+
 @media (max-width: 768px) {
     .tokenomics-card {
         flex-direction: column;
@@ -757,7 +754,7 @@ body::before {
     }
 }
 
-/* 社区部分样式 */
+
 .community {
     padding: 60px 0;
     position: relative;
@@ -810,7 +807,7 @@ body::before {
     z-index: 1;
 }
 
-/* 页脚样式 */
+
 footer {
     padding: 20px 0;
     background: linear-gradient(to top, rgba(10, 5, 28, 1), rgba(10, 5, 28, 0));
@@ -825,7 +822,7 @@ footer {
     letter-spacing: 1px;
 }
 
-/* 响应式设计 */
+
 @media (max-width: 768px) {
     .social-links {
         gap: 5px;
@@ -846,7 +843,7 @@ footer {
     }
 }
 
-/* 背景装饰元素 */
+
 .bg-element {
     position: absolute;
     z-index: -1;
@@ -932,7 +929,7 @@ footer {
     animation: floatOnly 21s ease-in-out infinite 2s;
 }
 
-/* 添加浮动动画 */
+
 @keyframes float {
     0% {
         transform: translateY(0);
@@ -945,7 +942,7 @@ footer {
     }
 }
 
-/* 添加只有上下浮动的动画 */
+
 @keyframes floatOnly {
     0% {
         transform: translateY(0) rotate(45deg);
@@ -958,16 +955,16 @@ footer {
     }
 }
 
-/* 修改sticky header样式 */
+
 .sticky-header {
     position: fixed;
     top: -100px;
     left: 50%;
     transform: translateX(-50%);
-    width: 1100px; /* 修改宽度为1100px */
-    background: rgba(20, 10, 39, 0.8); /* 添加透明度 */
-    backdrop-filter: blur(10px); /* 添加模糊效果 */
-    -webkit-backdrop-filter: blur(10px); /* Safari支持 */
+    width: 1100px; 
+    background: rgba(20, 10, 39, 0.8); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 15px 30px;
@@ -976,13 +973,12 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* 修复header内部布局 */
+
 .sticky-header .container {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* 三列布局 */
+    grid-template-columns: auto 1fr;
     align-items: center;
-    gap: 20px;
-    padding: 0; /* 移除container的padding */
+    padding: 0;
 }
 
 .sticky-header .logo {
@@ -992,20 +988,15 @@ footer {
 
 .sticky-header .nav-links {
     grid-column: 2;
-    justify-self: center;
-}
-
-.sticky-header .login-btn {
-    grid-column: 3;
     justify-self: end;
 }
 
 .sticky-header.visible {
-    top: 20px; /* 显示时的位置 */
+    top: 20px; 
     opacity: 1;
 }
 
-/* 确保在小屏幕上正确显示 */
+
 @media (max-width: 1200px) {
     .sticky-header {
         width: calc(100% - 40px);
@@ -1013,14 +1004,14 @@ footer {
     }
 }
 
-/* 修改button字体 */
+
 button {
     font-family: 'Lexend', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     position: relative;
     overflow: hidden;
 }
 
-/* 统一所有section标题样式 */
+
 .section-title {
     font-size: 48px;
     font-weight: 400;
@@ -1032,24 +1023,18 @@ button {
     text-align: center;
 }
 
-/* 确保discover部分的section-title也使用通用样式 */
-.discover .section-title,
-.tokenomics .section-title,
-.community .section-title {
-    /* 样式已移至通用.section-title */
-}
 
-/* 添加平滑滚动效果 */
+
+
 html {
     scroll-behavior: smooth;
 }
 
-/* 为锚点添加偏移，防止内容被sticky header遮挡 */
+
 section[id] {
     scroll-margin-top: 100px;
 }
 
-/* 滚动动画基础样式 */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -1061,7 +1046,7 @@ section[id] {
     transform: translateY(0);
 }
 
-/* 为不同元素添加不同的动画效果 */
+
 .section-title.animate-on-scroll {
     transform: translateY(20px) scale(0.95);
 }
@@ -1070,19 +1055,17 @@ section[id] {
     transform: translateY(0) scale(1);
 }
 
-/* 修复动画效果 */
+
 .heading .static-text {
     display: inline-block;
     white-space: nowrap;
     opacity: 1;
-    /* 移除可能冲突的动画 */
-    animation: none; /* 先移除动画，确保没有冲突 */
-}
+   
+    animation: none; 
 
-/* 为整个heading添加更平滑的动画 */
+
 .heading {
-    animation: smoothFadeIn 2s cubic-bezier(0.215, 0.610, 0.355, 1.000); /* 使用更平滑的缓动函数 */
-    opacity: 1;
+    animation: smoothFadeIn 2s cubic-bezier(0.215, 0.610, 0.355, 1.000); 
 }
 
 @keyframes smoothFadeIn {
@@ -1096,19 +1079,19 @@ section[id] {
     }
 }
 
-/* 移除可能冲突的动画 */
+
 @keyframes titleFadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
 
-/* 确保动态文本的过渡更平滑 */
+
 .dynamic-text .text {
     transition: opacity 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000), 
                 transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 }
 
-/* 按钮波纹效果 */
+
 .ripple {
     position: absolute;
     border-radius: 50%;
@@ -1125,7 +1108,6 @@ section[id] {
     }
 }
 
-/* 社交图标悬停效果增强 */
 .social-icons a, .social-link {
     display: inline-block;
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -1135,23 +1117,22 @@ section[id] {
     transform: translateY(-5px) scale(1.1);
 }
 
-/* 为features卡片添加3D悬停效果 */
+
 .features .card-wrapper:hover {
     transform: translateY(-5px) rotateX(5deg) rotateY(5deg);
 }
 
-/* 平板和手机版通用修改 - 隐藏滚动后的sticky header */
+
+
 @media (max-width: 1024px) {
     .sticky-header {
         display: none;
     }
 }
 
-/* iPad版优化 */
-@media (max-width: 1024px) and (min-width: 768px) {
-    /* 优化discover部分卡片显示 */
+@media (min-width: 768px) and (max-width: 1024px) {
     .discover-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
     
@@ -1160,96 +1141,59 @@ section[id] {
     }
     
     .discover-card .card-content {
-        padding: 30px;
+        padding: 30px; 
     }
     
-    .discover-card .text-content h3 {
-        font-size: 24px;
+    .discover-card .image-container {
+        height: 160px; 
     }
     
-    .discover-card .text-content p {
-        font-size: 16px;
+    .discover-card.wide-card .image-container {
+        height: 200px;
     }
 }
 
-/* 手机版优化 */
+
 @media (max-width: 767px) {
-    /* 确保dynamic-text和static-text大小一致 */
+    
     .heading {
-        font-size: 42px;
+        font-size: 36px; 
     }
     
-    .heading .static-text,
-    .dynamic-text .text {
-        font-size: 42px;
+    .static-text {
+        font-size: 36px;
+        margin-bottom: -10px;
     }
     
     .dynamic-text {
-        height: 60px; /* 调整高度以适应较小的字体 */
+        height: 60px; 
     }
     
-    /* 增大community部分的社交图标 */
-    .community .social-links {
-        gap: 25px;
+    .dynamic-text .text {
+        font-size: 36px; 
     }
     
-    .community .social-link img {
+    
+    .social-link {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .social-link img {
         width: 60px;
         height: 60px;
     }
     
-    /* 优化discover部分卡片显示 */
+
     .discover-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
     
     .discover-card.wide-card {
         grid-column: span 1;
     }
     
-    /* 调整features卡片布局 */
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .card-wrapper.wide-card {
-        grid-column: span 1;
-    }
-}
-
-/* 修改手机版导航栏布局 */
-@media (max-width: 767px) {
-    /* 修改导航栏布局 */
-    nav .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
-    /* 顶部行包含logo和按钮 */
-    .logo-button-row {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .logo {
-        margin-right: auto;
-    }
-    
-    .login-btn {
-        margin-top: 0;
-        margin-left: auto;
-    }
-    
-    /* 导航链接放在第二行 */
-    .nav-links {
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
+    .discover-card .card-content {
+        padding: 25px;
     }
 }
